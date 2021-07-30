@@ -1,0 +1,27 @@
+@media screen and(min-width:1024px) {
+  body {
+    main {
+      .bg-img-bot {
+        height: 60em;
+        bottom: -150px;
+      }
+      .desktop-flex {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .phone {
+          max-width: 400px;
+          flex: 2;
+          margin-right: 0;
+          margin-left: 1em;
+        }
+        .booking {
+          max-width: 500px;
+          text-align: left;
+          flex: 1;
+        }
+      }
+    }
+  }
+}

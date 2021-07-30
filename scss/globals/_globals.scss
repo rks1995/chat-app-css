@@ -1,0 +1,32 @@
+@import '../variables/index.scss';
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: $base-size;
+  font-family: $rubik-font;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+p {
+  font-size: 0.73rem;
+}
+
+img {
+  width: 100%;
+}

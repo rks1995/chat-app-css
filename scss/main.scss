@@ -1,0 +1,229 @@
+@import './globals/index.scss';
+@import './colors/index.scss';
+@import './variables/index.scss';
+@import './mediaQuery/desktop';
+@import './function/pxToRem';
+
+main {
+  background: $lt-grayish-violet;
+  padding: 3em;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  .bg-img-top {
+    width: 400px;
+    height: 800px;
+    background: $lt-violet;
+    position: absolute;
+    top: -250px;
+    left: -150px;
+    z-index: -1;
+    border-radius: 300px;
+  }
+  .bg-img-bot {
+    width: 400px;
+    height: 800px;
+    background-color: $lt-gr-violet;
+    position: absolute;
+    bottom: -400px;
+    right: -150px;
+    z-index: -1;
+    border-radius: 300px;
+  }
+  .phone {
+    max-width: 350px;
+    padding: 1em;
+    background: $white;
+    border-radius: 30px;
+    box-shadow: 3px 3px 40px $lt-grayish-violet;
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    /* this is the header section */
+    &__screen {
+      background: linear-gradient(to right, $lt-violet, $lt-magenta);
+      border-radius: 40px 40px 10px 10px;
+      padding: 4em 5em 2em 1em;
+      position: relative;
+      &::before {
+        content: '';
+        width: 50%;
+        height: 30%;
+        position: absolute;
+        margin: 0 auto;
+        top: -15px;
+        right: 0;
+        left: 0;
+        background: #fff;
+        border-radius: 30px;
+      }
+      .flex {
+        display: flex;
+        align-items: center;
+        color: $white;
+        .profile-img {
+          width: 30px;
+          height: 30px;
+          border: 3px solid $white;
+          border-radius: 50%;
+          margin: 0 1em;
+        }
+        .status {
+          color: $grayish-blue;
+        }
+        .more {
+          color: $white;
+          position: absolute;
+          right: 2rem;
+        }
+      }
+    }
+    /* this section is for the chat section */
+    .chat {
+      background: $lt-grayish-violet;
+      padding: 0.5em 1em 0.5em;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      .user-one {
+        max-width: 200px;
+        padding: 0.2em 1em;
+        background: $lt-gr-violet;
+        margin-top: 15px;
+        color: $moderate-violet;
+        border-radius: 30px;
+        animation-duration: 3s;
+        animation-name: slidein;
+        @keyframes slidein {
+          from {
+            margin-left: 50%;
+            width: 300%;
+          }
+          to {
+            margin-left: 0;
+            width: 100%;
+          }
+        }
+      }
+      .flex {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        width: 100%;
+        img {
+          width: 60px;
+          border-radius: 20px;
+          margin-top: 20px;
+          animation-duration: 3s;
+          animation-name: slideout;
+          @keyframes slideout {
+            from {
+              margin-right: 50%;
+              width: 50px;
+            }
+            to {
+              margin-right: 0;
+              width: 60px;
+            }
+          }
+        }
+      }
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .user-two {
+          background: $white;
+          max-width: 200px;
+          padding: 0.2em 1em;
+          margin-top: 15px;
+          border-radius: 30px;
+          animation-duration: 3s;
+          animation-name: slideout;
+          @keyframes slideout {
+            from {
+              margin-right: 50%;
+              width: 300%;
+            }
+            to {
+              margin-right: 0;
+              width: 100%;
+            }
+          }
+        }
+        .second-text {
+          width: 50%;
+        }
+      }
+      .btn-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(to right, $lt-magenta, $lt-violet);
+        margin: 15px 0;
+        padding: 1em;
+        border-radius: 30px 30px 30px 10px;
+        max-width: 200px;
+        color: #fff;
+        animation-duration: 3s;
+        animation-name: slidein;
+        @keyframes slidein {
+          from {
+            margin-left: 50%;
+            width: 300%;
+          }
+          to {
+            margin-left: 0;
+            width: 100%;
+          }
+        }
+        .label-text {
+          font-size: 0.73rem;
+        }
+      }
+      .input {
+        width: 100%;
+        border: none;
+        padding: 1em;
+        margin-top: 15px;
+        border-radius: 30px;
+      }
+      .parent-input {
+        position: relative;
+        .send {
+          position: absolute;
+          right: 20px;
+          top: 26px;
+        }
+      }
+    }
+  }
+  .booking {
+    text-align: center;
+    padding: 3em 1em;
+    position: relative;
+    z-index: 2;
+    animation-duration: 3s;
+    animation-name: slidein;
+    @keyframes slidein {
+      from {
+        margin-left: 100%;
+        width: 300%;
+      }
+      to {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+    &__heading {
+      font-size: 3em;
+      font-weight: 500;
+      color: $very-drk-violet;
+    }
+    &__text {
+      font-size: 1em;
+      line-height: 1.5;
+      color: $drk-grayish-violet;
+    }
+  }
+  /*end of main */
+}

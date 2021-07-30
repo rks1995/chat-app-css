@@ -1,0 +1,7 @@
+// this function converts px to rem;
+
+@import '../variables/variables';
+
+@function rem($target, $context: $base-size) {
+  @return ($target / $context) * 1rem;
+}

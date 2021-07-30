@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+p {
+  font-size: 0.73rem;
+}
+
+img {
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  body main .bg-img-bot {
+    height: 60em;
+    bottom: -150px;
+  }
+  body main .desktop-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main .desktop-flex .phone {
+    max-width: 400px;
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    margin-right: 0;
+    margin-left: 1em;
+  }
+  body main .desktop-flex .booking {
+    max-width: 500px;
+    text-align: left;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+main {
+  background: #f5f3f7;
+  padding: 3em;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  /*end of main */
+}
+
+main .bg-img-top {
+  width: 400px;
+  height: 800px;
+  background: #8838ff;
+  position: absolute;
+  top: -250px;
+  left: -150px;
+  z-index: -1;
+  border-radius: 300px;
+}
+
+main .bg-img-bot {
+  width: 400px;
+  height: 800px;
+  background-color: rgba(179, 163, 194, 0.178);
+  position: absolute;
+  bottom: -400px;
+  right: -150px;
+  z-index: -1;
+  border-radius: 300px;
+}
+
+main .phone {
+  max-width: 350px;
+  padding: 1em;
+  background: white;
+  border-radius: 30px;
+  -webkit-box-shadow: 3px 3px 40px #f5f3f7;
+          box-shadow: 3px 3px 40px #f5f3f7;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  /* this is the header section */
+  /* this section is for the chat section */
+}
+
+main .phone__screen {
+  background: -webkit-gradient(linear, left top, right top, from(#8838ff), to(#e942ff));
+  background: linear-gradient(to right, #8838ff, #e942ff);
+  border-radius: 40px 40px 10px 10px;
+  padding: 4em 5em 2em 1em;
+  position: relative;
+}
+
+main .phone__screen::before {
+  content: '';
+  width: 50%;
+  height: 30%;
+  position: absolute;
+  margin: 0 auto;
+  top: -15px;
+  right: 0;
+  left: 0;
+  background: #fff;
+  border-radius: 30px;
+}
+
+main .phone__screen .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+main .phone__screen .flex .profile-img {
+  width: 30px;
+  height: 30px;
+  border: 3px solid white;
+  border-radius: 50%;
+  margin: 0 1em;
+}
+
+main .phone__screen .flex .status {
+  color: #c6cacd;
+}
+
+main .phone__screen .flex .more {
+  color: white;
+  position: absolute;
+  right: 2rem;
+}
+
+main .phone .chat {
+  background: #f5f3f7;
+  padding: 0.5em 1em 0.5em;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+main .phone .chat .user-one {
+  max-width: 200px;
+  padding: 0.2em 1em;
+  background: rgba(179, 163, 194, 0.178);
+  margin-top: 15px;
+  color: #9241c8;
+  border-radius: 30px;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-left: 50%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 50%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+main .phone .chat .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 10px;
+  width: 100%;
+}
+
+main .phone .chat .flex img {
+  width: 60px;
+  border-radius: 20px;
+  margin-top: 20px;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: slideout;
+          animation-name: slideout;
+}
+
+@-webkit-keyframes slideout {
+  from {
+    margin-right: 50%;
+    width: 50px;
+  }
+  to {
+    margin-right: 0;
+    width: 60px;
+  }
+}
+
+@keyframes slideout {
+  from {
+    margin-right: 50%;
+    width: 50px;
+  }
+  to {
+    margin-right: 0;
+    width: 60px;
+  }
+}
+
+main .phone .chat .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main .phone .chat .wrapper .user-two {
+  background: white;
+  max-width: 200px;
+  padding: 0.2em 1em;
+  margin-top: 15px;
+  border-radius: 30px;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: slideout;
+          animation-name: slideout;
+}
+
+@keyframes slideout {
+  from {
+    margin-right: 50%;
+    width: 300%;
+  }
+  to {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+main .phone .chat .wrapper .second-text {
+  width: 50%;
+}
+
+main .phone .chat .btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, right top, from(#e942ff), to(#8838ff));
+  background: linear-gradient(to right, #e942ff, #8838ff);
+  margin: 15px 0;
+  padding: 1em;
+  border-radius: 30px 30px 30px 10px;
+  max-width: 200px;
+  color: #fff;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 50%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+main .phone .chat .btn-container .label-text {
+  font-size: 0.73rem;
+}
+
+main .phone .chat .input {
+  width: 100%;
+  border: none;
+  padding: 1em;
+  margin-top: 15px;
+  border-radius: 30px;
+}
+
+main .phone .chat .parent-input {
+  position: relative;
+}
+
+main .phone .chat .parent-input .send {
+  position: absolute;
+  right: 20px;
+  top: 26px;
+}
+
+main .booking {
+  text-align: center;
+  padding: 3em 1em;
+  position: relative;
+  z-index: 2;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+main .booking__heading {
+  font-size: 3em;
+  font-weight: 500;
+  color: #3e2753;
+}
+
+main .booking__text {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #a39daa;
+}
+/*# sourceMappingURL=main.css.map */
